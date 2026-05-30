@@ -50,12 +50,13 @@ export function CommandPalette({ shows, artists }: Props) {
 
   // Focus input when opened, reset state
   useEffect(() => {
-    if (open) {
+    if (!open) return;
+    const frame = requestAnimationFrame(() => {
       setQuery("");
       setActiveIndex(0);
-      // Small delay so the element is mounted before focusing
-      requestAnimationFrame(() => inputRef.current?.focus());
-    }
+      inputRef.current?.focus();
+    });
+    return () => cancelAnimationFrame(frame);
   }, [open]);
 
   // Filter results
@@ -75,11 +76,6 @@ export function CommandPalette({ shows, artists }: Props) {
 
     return [...matchedShows, ...matchedArtists];
   }, [query, shows, artists]);
-
-  // Reset active index when results change
-  useEffect(() => {
-    setActiveIndex(0);
-  }, [results]);
 
   // Navigate to a result
   const navigate = useCallback(
@@ -167,7 +163,10 @@ export function CommandPalette({ shows, artists }: Props) {
             ref={inputRef}
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setActiveIndex(0);
+            }}
             placeholder="Search shows and artists..."
             className={cn(
               "flex-1 h-12 text-[16px] text-ink-900 placeholder:text-ink-400",

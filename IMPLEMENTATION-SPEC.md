@@ -1,14 +1,14 @@
-# Implementation Spec — Transparent Settlement Worksheet
+# Implementation Notes - Transparent Settlement Worksheet
 
 ---
 
 ## Context
 
-Take-home case study for Greenroom (Applied AI PM). Modify the existing `greenroom-starter` repo. No external APIs, no env vars, no extra dependencies.
+Personal product demo for Greenroom settlement workflows. The project extends a starter venue-ops codebase with settlement coverage, review states, and transparent calculation logic. No external APIs, no env vars, no extra dependencies.
 
 **Our slice:** Turn the settlement page into a transparent worksheet that handles all deal types, shows its work line-by-line, and surfaces data inconsistencies — then make those issues visible across the entire app so nothing slips through.
 
-**Evaluator experience:** `npm install && npm run dev` → open browser → everything works.
+**Local demo experience:** `npm install && npm run dev` -> open browser -> everything works.
 
 **What changed:** The 63% of shows that previously displayed "this deal type isn't supported" now show a full, line-by-line settlement calculation with data sources and warnings. Data inconsistencies and amount mismatches are flagged on the shows list, show detail page, and settlement page.
 

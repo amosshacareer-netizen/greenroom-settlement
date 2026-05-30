@@ -70,7 +70,7 @@ const VENUE_CAPACITY = 650;
 const MARIANA_ID = "user_mariana";
 const MARCUS_ID = "user_marcus";
 // TODAY is dynamic — anchored on the moment the seed is run. This keeps the
-// product feeling current no matter when the candidate clones the repo. The
+// product feeling current no matter when someone clones the repo. The
 // Coastal Spell dispute below is hardcoded to a fixed historical date (March 14, 2025)
 // because the email thread references it specifically; that show stays
 // well in the past regardless of when the seed is regenerated.
@@ -976,7 +976,7 @@ async function main() {
 
     // Generate full financial data for ALL shows — past and future.
     // The query layer time-gates future shows so settlement/ticket data
-    // only surfaces once the show date has passed. This way candidates
+    // only surfaces once the show date has passed. This way reviewers
     // opening the case on any future date see complete data for shows
     // that have moved into the past.
     {
@@ -1050,13 +1050,13 @@ async function main() {
 
   // -------- Plant breadcrumbs: deliberate UI/data contradictions --------
   //
-  // These are intentional inconsistencies that a sharp candidate should find
+  // These are intentional inconsistencies that a sharp reviewer should find
   // by reading the data carefully against what the UI displays. Each one
   // illuminates a different facet of why structured-fields-vs-prose is hard.
-  // The hiring team's "answer key" lists what each breadcrumb tests for.
+  // The internal answer key lists what each breadcrumb tests for.
   //
   // We mutate already-generated rows rather than creating dedicated breadcrumb
-  // shows — this way the IDs look ordinary and candidates have to mine.
+  // shows - this way the IDs look ordinary and reviewers have to mine.
 
   const pastSettlements = settlementsToInsert.filter(
     (s) => s.status !== "draft" && s.status !== "voided",

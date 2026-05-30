@@ -198,7 +198,7 @@ export default async function SettlePage({
           <Logomark size={40} className="shrink-0" />
           <div>
             <h2 className="font-display text-[20px] font-medium text-ink-900 mb-2" style={{ letterSpacing: "-0.02em" }}>
-              You&apos;re looking at the seam this case study is about.
+              You&apos;re looking at the workflow gap this demo focuses on.
             </h2>
             <p className="text-[13px] text-ink-500 leading-relaxed">
               Greenroom&apos;s in-app settlement tool was built early in the

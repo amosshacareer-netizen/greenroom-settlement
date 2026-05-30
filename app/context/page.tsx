@@ -33,21 +33,21 @@ export default function ContextPage() {
         <p className="text-[14.5px] text-ink-600 mt-4 leading-relaxed max-w-2xl">
           You&apos;re looking at our product as Mariana, lead booker at The
           Crescent. The product works. It&apos;s also visibly mediocre in
-          places. Both of those things are true on purpose — this is the
-          substrate for your case study.
+          places. Both of those things are true on purpose - this is the
+          sandbox for exploring settlement quality.
         </p>
       </div>
 
-      {/* Read-the-brief callout */}
+      {/* Product problem callout */}
       <div className="rounded-lg border border-brand-200/60 bg-brand-50/30 p-5 flex gap-3 mb-12">
         <AlertCircle className="h-4 w-4 text-brand-700 mt-0.5 shrink-0" />
         <p className="text-[13px] text-ink-800 leading-relaxed">
           <strong className="font-semibold">
-            Read your case study brief first.
+            Start with the product problem.
           </strong>{" "}
-          It explains the problem you&apos;re solving and the principles
-          we&apos;re evaluating you on. This page is just orientation inside
-          the product itself.
+          The workflow is intentionally messy: deal notes, structured fields,
+          disputes, and payouts do not always agree. This page is orientation
+          inside the product itself.
         </p>
       </div>
 
@@ -76,9 +76,9 @@ export default function ContextPage() {
         </Step>
         <Step n={3}>
           Click the green <strong>Settle show</strong> button. For most deal
-          types — Vs deals, % of net, door deals — the tool will tell you it
-          isn&apos;t supported. That empty state is the seam this case study
-          is about.
+          types - Vs deals, % of net, door deals - the tool will tell you it
+          isn&apos;t supported. That empty state is the product gap this demo
+          focuses on.
         </Step>
         <Step n={4}>
           Try Settle on a show with a <strong>Flat</strong> badge. The tool
@@ -135,19 +135,20 @@ export default function ContextPage() {
 
       {/* How we evaluate */}
       <h2 className="font-display text-[24px] font-medium text-ink-900 mb-4" style={{ letterSpacing: "-0.02em" }}>
-        How we&apos;re thinking about your work
+        How to think about the product slice
       </h2>
       <p className="text-[13.5px] text-ink-600 leading-relaxed">
-        Settlement isn&apos;t one problem. It&apos;s several adjacent ones —
+        Settlement isn&apos;t one problem. It&apos;s several adjacent ones -
         deal modeling, audit trails, real-time prediction, the 2am
         walkthrough conversation, post-show agent communication. Pick one
         slice (or a tightly coupled pair). Take it deep. Don&apos;t try to
         fix the whole thing.
       </p>
       <p className="text-[13.5px] text-ink-600 leading-relaxed mt-3">
-        Your case study brief explains what we&apos;re evaluating you on.
-        We&apos;ll talk about your slice in person — what you picked, what
-        you cut, what you cut deliberately, and what you&apos;d ship next.
+        This demo focuses on one slice: making settlement calculations
+        explainable and surfacing records that need review. The point is not
+        to fix the whole app; it is to make the riskiest workflow more
+        trustworthy.
       </p>
 
       {/* Data skepticism hint */}

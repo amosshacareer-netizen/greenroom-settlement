@@ -1,6 +1,6 @@
-# Build Session Log — Greenroom Settlement Case Study
+# Build Session Log - Greenroom Settlement Demo
 
-This is a record of my Claude Code session for the Greenroom settlement case study. I've condensed it to the key prompts and decisions — the full session ran approximately 7 hours across exploration, design, and implementation.
+This is a record of my Claude Code session for the Greenroom settlement product demo. I've condensed it to the key prompts and decisions; the full session ran approximately 7 hours across exploration, design, and implementation.
 
 ---
 
